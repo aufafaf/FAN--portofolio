@@ -1,0 +1,200 @@
+import type { Experience } from "@/types";
+
+/**
+ * Work Experience Data
+ * Professional work history with detailed information
+ */
+export const experiences: Experience[] = [
+  {
+    id: "1",
+    company: "Tech Innovators Inc",
+    position: "Senior Full Stack Developer",
+    location: "Remote",
+    startDate: "Jan 2023",
+    endDate: "Present",
+    description:
+      "Leading development of cutting-edge web applications using modern technologies. Architecting scalable solutions and mentoring junior developers.",
+    responsibilities: [
+      "Architected and developed scalable web applications using Next.js, React, and Node.js",
+      "Implemented 3D graphics and animations using Three.js and WebGL",
+      "Mentored team of 5 junior developers through code reviews and pair programming",
+      "Established CI/CD pipelines using GitHub Actions and Vercel",
+      "Optimized application performance resulting in 60% faster load times",
+      "Collaborated with design team to implement pixel-perfect UI/UX",
+    ],
+    achievements: [
+      "Reduced page load time by 60% through code splitting and lazy loading",
+      "Led migration from Create React App to Next.js 14, improving SEO by 40%",
+      "Introduced Three.js for 3D product visualization, increasing conversions by 35%",
+      "Built design system used across 10+ projects",
+      "Received 'Developer of the Year' award in 2023",
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Three.js",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+    ],
+    type: "Full-time",
+    logo: "/companies/tech-innovators.png",
+    companyUrl: "https://techinnovators.example.com",
+  },
+  {
+    id: "2",
+    company: "Digital Solutions Co",
+    position: "Frontend Developer",
+    location: "San Francisco, CA",
+    startDate: "Jun 2021",
+    endDate: "Dec 2022",
+    description:
+      "Built responsive and interactive user interfaces for enterprise clients. Specialized in React ecosystem and modern CSS frameworks.",
+    responsibilities: [
+      "Developed reusable React components following atomic design principles",
+      "Collaborated with UX designers to implement responsive designs",
+      "Integrated RESTful APIs and GraphQL endpoints",
+      "Optimized bundle sizes and improved Core Web Vitals scores",
+      "Conducted technical interviews for frontend positions",
+      "Maintained component library documentation using Storybook",
+    ],
+    achievements: [
+      "Successfully delivered 15+ client projects on time and within budget",
+      "Improved mobile responsiveness across all platforms (100% responsive)",
+      "Reduced JavaScript bundle size by 40% through code optimization",
+      "Implemented automated testing with 85% code coverage",
+      "Created internal component library used company-wide",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Tailwind CSS",
+      "GraphQL",
+      "Jest",
+      "Cypress",
+      "Figma",
+    ],
+    type: "Full-time",
+    logo: "/companies/digital-solutions.png",
+    companyUrl: "https://digitalsolutions.example.com",
+  },
+  {
+    id: "3",
+    company: "Startup XYZ",
+    position: "Full Stack Developer",
+    location: "Remote",
+    startDate: "Jan 2020",
+    endDate: "May 2021",
+    description:
+      "Joined as early employee to build MVP from scratch. Wore multiple hats including frontend, backend, DevOps, and product development.",
+    responsibilities: [
+      "Built MVP from scratch using React and Node.js",
+      "Designed and implemented RESTful API architecture",
+      "Set up AWS infrastructure (EC2, S3, RDS, CloudFront)",
+      "Integrated third-party APIs (Stripe, SendGrid, Twilio)",
+      "Implemented user authentication and authorization (JWT)",
+      "Maintained production environment and handled deployments",
+    ],
+    achievements: [
+      "Helped company secure Series A funding of $2M",
+      "Built platform serving 10,000+ active users",
+      "Achieved 99.9% uptime in production",
+      "Reduced AWS costs by 30% through optimization",
+      "Featured in TechCrunch and Product Hunt",
+    ],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "Redis",
+      "Stripe API",
+    ],
+    type: "Full-time",
+    logo: "/companies/startup-xyz.png",
+    companyUrl: "https://startupxyz.example.com",
+  },
+  {
+    id: "4",
+    company: "Creative Agency Ltd",
+    position: "Junior Frontend Developer",
+    location: "New York, NY",
+    startDate: "Jun 2019",
+    endDate: "Dec 2019",
+    description:
+      "Developed websites and landing pages for various clients. Focused on responsive design and cross-browser compatibility.",
+    responsibilities: [
+      "Created responsive websites using HTML, CSS, and JavaScript",
+      "Implemented designs from Photoshop and Sketch mockups",
+      "Ensured cross-browser compatibility (Chrome, Firefox, Safari, Edge)",
+      "Optimized images and assets for web performance",
+      "Collaborated with designers and project managers",
+      "Performed QA testing before client delivery",
+    ],
+    achievements: [
+      "Delivered 20+ client websites with 100% satisfaction rate",
+      "Improved website performance scores by average of 30%",
+      "Learned modern frameworks (React, Vue.js) during employment",
+      "Received positive feedback from 95% of clients",
+    ],
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "jQuery",
+      "Bootstrap",
+      "Sass",
+      "WordPress",
+      "Git",
+    ],
+    type: "Full-time",
+    logo: "/companies/creative-agency.png",
+  },
+  {
+    id: "5",
+    company: "Freelance",
+    position: "Web Developer & Designer",
+    location: "Remote",
+    startDate: "Jan 2018",
+    endDate: "May 2019",
+    description:
+      "Provided web development and design services to small businesses and startups. Built custom websites and web applications.",
+    responsibilities: [
+      "Consulted with clients to understand requirements",
+      "Designed wireframes and mockups in Figma",
+      "Developed custom websites and web applications",
+      "Provided ongoing maintenance and support",
+      "Managed project timelines and client communications",
+      "Handled hosting setup and domain configuration",
+    ],
+    achievements: [
+      "Successfully completed 30+ freelance projects",
+      "Maintained 5-star rating on freelancing platforms",
+      "Generated $50K+ in revenue",
+      "Built long-term relationships with recurring clients",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "WordPress",
+      "Figma",
+      "Photoshop",
+    ],
+    type: "Freelance",
+  },
+];
+
+// Export filtered arrays for convenience
+export const currentJobs = experiences.filter((exp) => exp.endDate === "Present");
+export const pastJobs = experiences.filter((exp) => exp.endDate !== "Present");
+export const fullTimeJobs = experiences.filter((exp) => exp.type === "Full-time");
+export const freelanceJobs = experiences.filter((exp) => exp.type === "Freelance");
