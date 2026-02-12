@@ -10,21 +10,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Cyberpunk color palette
         neon: {
-          pink: "#FF006E",
-          cyan: "#00F0FF",
-          purple: "#8B5CF6",
-          green: "#00FF41",
-          yellow: "#FFFF00",
-          orange: "#FF6B35",
+          pink: "#ff006e",
+          cyan: "#00f0ff",
+          purple: "#9d00ff",
+          green: "#39ff14",
         },
-        cyber: {
-          dark: "#0A0E27",
-          darker: "#050816",
-          blue: "#1A1F3A",
-          purple: "#2D1B69",
+        // Professional & Elegant color palette
+        elegant: {
+          navy: "#1a2332",
+          slate: "#2d3748",
+          charcoal: "#374151",
+          gold: "#d4af37",
+          cream: "#f5f1e8",
         },
+        // Custom accent colors
+        "accent-primary": "#3b82f6", // Professional blue
+        "accent-secondary": "#8b5cf6", // Elegant purple
+        "accent-tertiary": "#10b981", // Success green
         // shadcn/ui colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -66,38 +69,21 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        // Cyberpunk fonts - distinctive choices!
-        heading: ["var(--font-orbitron)", "system-ui", "sans-serif"],
-        body: ["var(--font-rajdhani)", "system-ui", "sans-serif"],
+        // Professional fonts - clean and elegant
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-playfair)", "Georgia", "serif"],
         mono: ["var(--font-fira-code)", "monospace"],
-        display: ["var(--font-audiowide)", "system-ui", "sans-serif"],
       },
       animation: {
-        // Custom animations
+        // Subtle, professional animations
         "fade-in": "fadeIn 0.6s ease-out",
         "fade-up": "fadeUp 0.6s ease-out",
-        "fade-down": "fadeDown 0.6s ease-out",
-        "slide-in-left": "slideInLeft 0.6s ease-out",
-        "slide-in-right": "slideInRight 0.6s ease-out",
-        "zoom-in": "zoomIn 0.6s ease-out",
-        "rotate-in": "rotateIn 0.6s ease-out",
-        "glitch": "glitch 1s infinite",
-        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite",
-        "spin-slow": "spin 8s linear infinite",
-        "bounce-slow": "bounce 3s ease-in-out infinite",
-        "gradient-x": "gradientX 15s ease infinite",
-        "gradient-y": "gradientY 15s ease infinite",
-        "gradient-xy": "gradientXY 15s ease infinite",
-        "shimmer": "shimmer 2s linear infinite",
-        "reveal": "reveal 0.7s ease-out",
-        "typewriter": "typewriter 3s steps(40) 1s forwards",
-        "blink": "blink 1s step-end infinite",
-        "neon-pulse": "neonPulse 1.5s ease-in-out infinite",
-        "hologram": "hologram 3s ease-in-out infinite",
-        "scan-line": "scanLine 4s linear infinite",
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "slide-in": "slideIn 0.6s ease-out",
+        "scale-in": "scaleIn 0.5s ease-out",
+        "gradient-shift": "gradientShift 8s ease infinite",
+        float: "float 6s ease-in-out infinite",
+        "pulse-subtle": "pulseSubtle 3s ease-in-out infinite",
+        shimmer: "shimmer 2.5s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -137,7 +123,10 @@ const config: Config = {
         },
         pulseGlow: {
           "0%, 100%": { boxShadow: "0 0 5px rgba(255, 0, 110, 0.5)" },
-          "50%": { boxShadow: "0 0 20px rgba(255, 0, 110, 0.8), 0 0 30px rgba(255, 0, 110, 0.6)" },
+          "50%": {
+            boxShadow:
+              "0 0 20px rgba(255, 0, 110, 0.8), 0 0 30px rgba(255, 0, 110, 0.6)",
+          },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
@@ -175,10 +164,12 @@ const config: Config = {
         },
         neonPulse: {
           "0%, 100%": {
-            textShadow: "0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa, 0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa",
+            textShadow:
+              "0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa, 0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa",
           },
           "50%": {
-            textShadow: "0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #0fa, 0 0 17px #0fa, 0 0 20px #0fa, 0 0 30px #0fa, 0 0 40px #0fa",
+            textShadow:
+              "0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #0fa, 0 0 17px #0fa, 0 0 20px #0fa, 0 0 30px #0fa, 0 0 40px #0fa",
           },
         },
         hologram: {
@@ -200,18 +191,25 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "cyber-grid": "linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px)",
-        "shimmer-gradient": "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent)",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "cyber-grid":
+          "linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px)",
+        "shimmer-gradient":
+          "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent)",
       },
       backgroundSize: {
         "cyber-grid": "50px 50px",
       },
       boxShadow: {
-        "neon-pink": "0 0 5px theme('colors.neon.pink'), 0 0 20px theme('colors.neon.pink')",
-        "neon-cyan": "0 0 5px theme('colors.neon.cyan'), 0 0 20px theme('colors.neon.cyan')",
-        "neon-purple": "0 0 5px theme('colors.neon.purple'), 0 0 20px theme('colors.neon.purple')",
-        "neon-green": "0 0 5px theme('colors.neon.green'), 0 0 20px theme('colors.neon.green')",
+        "neon-pink":
+          "0 0 5px theme('colors.neon.pink'), 0 0 20px theme('colors.neon.pink')",
+        "neon-cyan":
+          "0 0 5px theme('colors.neon.cyan'), 0 0 20px theme('colors.neon.cyan')",
+        "neon-purple":
+          "0 0 5px theme('colors.neon.purple'), 0 0 20px theme('colors.neon.purple')",
+        "neon-green":
+          "0 0 5px theme('colors.neon.green'), 0 0 20px theme('colors.neon.green')",
         "glow-sm": "0 0 10px rgba(139, 92, 246, 0.5)",
         "glow-md": "0 0 20px rgba(139, 92, 246, 0.5)",
         "glow-lg": "0 0 40px rgba(139, 92, 246, 0.5)",
@@ -221,7 +219,7 @@ const config: Config = {
         xs: "2px",
       },
       transitionTimingFunction: {
-        "cyber": "cubic-bezier(0.87, 0, 0.13, 1)",
+        cyber: "cubic-bezier(0.87, 0, 0.13, 1)",
       },
       screens: {
         xs: "475px",
