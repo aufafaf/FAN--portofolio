@@ -154,23 +154,27 @@ export const SEO = {
   },
 };
 
-// Theme Colors (matching Tailwind config)
+// Theme Colors (Modern Monochrome)
 export const THEME_COLORS = {
-  elegant: {
-    ivory: "#FFFFF0",
-    cream: "#FAF9F6",
-    linen: "#F5F0E8",
-    sand: "#E8DCC4",
-    taupe: "#B8A892",
-    brown: "#6B5444",
-    deepBrown: "#4A3728",
-    charcoal: "#2C2418",
+  mono: {
+    white: "#FFFFFF",
+    gray50: "#FAFAFA",
+    gray100: "#F5F5F5",
+    gray200: "#E5E5E5",
+    gray300: "#D4D4D4",
+    gray400: "#A3A3A3",
+    gray500: "#737373",
+    gray600: "#525252",
+    gray700: "#404040",
+    gray800: "#262626",
+    gray900: "#171717",
+    black: "#000000",
   },
   accent: {
-    primary: "#6B5444",
-    secondary: "#8B7355",
-    tertiary: "#A68A64",
-    highlight: "#D4A574",
+    primary: "#2563eb", // GitHub blue
+    secondary: "#0070f3", // Vercel blue
+    tertiary: "#3b82f6", // Light blue
+    success: "#22c55e", // Green
   },
 };
 

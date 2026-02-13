@@ -7,30 +7,30 @@
 
 @layer base {
   :root {
-    /* shadcn/ui CSS Variables - Light Mode (Ivory & Brown) */
-    --background: 48 67% 97%; /* Ivory */
-    --foreground: 30 25% 15%; /* Deep Brown */
-    --card: 40 40% 98%;
-    --card-foreground: 30 25% 15%;
-    --popover: 40 40% 98%;
-    --popover-foreground: 30 25% 15%;
-    --primary: 30 25% 35%; /* Warm Brown */
-    --primary-foreground: 48 67% 97%;
-    --secondary: 35 20% 90%;
-    --secondary-foreground: 30 25% 15%;
-    --muted: 35 20% 90%;
-    --muted-foreground: 30 15% 45%;
-    --accent: 35 30% 80%;
-    --accent-foreground: 30 25% 15%;
+    /* Modern Monochrome - Light Mode (GitHub/Vercel style) */
+    --background: 0 0% 100%; /* Pure White */
+    --foreground: 0 0% 9%; /* Almost Black */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+    --primary: 221 83% 53%; /* Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 48 67% 97%;
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 30 25% 35%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 221 83% 53%;
     --radius: 0.5rem;
 
     /* Custom Variables */
-    --accent-color: #6B5444;
+    --accent-color: #2563eb;
     
     /* Font Variables */
     --font-inter: 'Inter', sans-serif;
@@ -39,26 +39,26 @@
   }
 
   .dark {
-    /* Dark mode colors - Deep Brown & Cream */
-    --background: 30 25% 12%; /* Deep Brown */
-    --foreground: 40 40% 95%; /* Cream */
-    --card: 30 25% 15%;
-    --card-foreground: 40 40% 95%;
-    --popover: 30 25% 15%;
-    --popover-foreground: 40 40% 95%;
-    --primary: 35 35% 60%; /* Light Brown */
-    --primary-foreground: 30 25% 12%;
-    --secondary: 30 20% 20%;
-    --secondary-foreground: 40 40% 95%;
-    --muted: 30 20% 20%;
-    --muted-foreground: 35 15% 65%;
-    --accent: 30 20% 25%;
-    --accent-foreground: 40 40% 95%;
+    /* Dark mode - GitHub/Vercel dark style */
+    --background: 0 0% 9%; /* Almost Black */
+    --foreground: 0 0% 98%; /* Almost White */
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%; /* Blue */
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62% 45%;
-    --destructive-foreground: 40 40% 95%;
-    --border: 30 20% 25%;
-    --input: 30 20% 25%;
-    --ring: 35 35% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 217 91% 60%;
   }
 
   * {
@@ -77,39 +77,39 @@
     scroll-behavior: smooth;
   }
 
-  /* Elegant scrollbar - Brown theme */
+  /* Modern scrollbar - Clean blue */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(107, 84, 68, 0.05);
+    background: rgba(0, 0, 0, 0.05);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #6B5444 0%, #8B7355 100%);
+    background: #2563eb;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #4A3728 0%, #6B5444 100%);
+    background: #1d4ed8;
   }
 
   /* Firefox scrollbar */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #6B5444 rgba(107, 84, 68, 0.05);
+    scrollbar-color: #2563eb rgba(0, 0, 0, 0.05);
   }
 
-  /* Selection color - Warm brown */
+  /* Selection color - Blue */
   ::selection {
-    background: rgba(107, 84, 68, 0.2);
+    background: rgba(37, 99, 235, 0.2);
     color: inherit;
   }
 
   ::-moz-selection {
-    background: rgba(107, 84, 68, 0.2);
+    background: rgba(37, 99, 235, 0.2);
     color: inherit;
   }
 }
@@ -130,16 +130,16 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
-  /* Gradient text - Elegant Brown */
+  /* Gradient text - Modern Blue */
   .gradient-text {
-    background: linear-gradient(135deg, #6B5444, #A68A64);
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gradient-text-animated {
-    background: linear-gradient(90deg, #6B5444, #A68A64, #D4A574, #6B5444);
+    background: linear-gradient(90deg, #2563eb, #0070f3, #3b82f6, #2563eb);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -156,44 +156,55 @@
     }
   }
 
-  /* Elegant button hover effect */
+  /* Modern button hover effect */
   .btn-professional {
     position: relative;
-    background: linear-gradient(135deg, #6B5444, #8B7355);
+    background: #2563eb;
     border: none;
     color: white;
     transition: all 0.3s ease;
   }
 
   .btn-professional:hover {
+    background: #1d4ed8;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(107, 84, 68, 0.3);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
   }
 
-  /* Elegant border gradient */
+  /* Modern border */
   .elegant-border {
     position: relative;
-    border: 2px solid transparent;
-    background: linear-gradient(white, white),
-      linear-gradient(135deg, #6B5444, #A68A64);
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .elegant-border:hover {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
   }
 
   .dark .elegant-border {
-    background: linear-gradient(var(--background), var(--background)),
-      linear-gradient(135deg, #6B5444, #A68A64);
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .elegant-border:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
   }
 
   /* Subtle grid background */
   .subtle-grid {
     background-image: 
-      linear-gradient(rgba(107, 84, 68, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(107, 84, 68, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
     background-position: center center;
+  }
+
+  .dark .subtle-grid {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   }
 
   /* Card hover effect - Professional */
@@ -237,12 +248,12 @@
     }
   }
 
-  /* Elegant spinner */
+  /* Modern spinner */
   .professional-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(107, 84, 68, 0.1);
-    border-top-color: #6B5444;
+    border: 3px solid rgba(37, 99, 235, 0.1);
+    border-top-color: #2563eb;
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }
