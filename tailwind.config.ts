@@ -13,21 +13,25 @@ const config: Config = {
         neon: {
           pink: "#ff006e",
           cyan: "#00f0ff",
-          purple: "#9d00ff",
+          purple: "#8b5cf6",
           green: "#39ff14",
         },
-        // Professional & Elegant color palette
+        // Elegant Minimalist - Ivory & Brown palette
         elegant: {
-          navy: "#1a2332",
-          slate: "#2d3748",
-          charcoal: "#374151",
-          gold: "#d4af37",
-          cream: "#f5f1e8",
+          ivory: "#FFFFF0",
+          cream: "#FAF9F6",
+          linen: "#F5F0E8",
+          sand: "#E8DCC4",
+          taupe: "#B8A892",
+          brown: "#6B5444",
+          "deep-brown": "#4A3728",
+          charcoal: "#2C2418",
         },
-        // Custom accent colors
-        "accent-primary": "#3b82f6", // Professional blue
-        "accent-secondary": "#8b5cf6", // Elegant purple
-        "accent-tertiary": "#10b981", // Success green
+        // Accent colors - Sophisticated
+        "accent-primary": "#6B5444", // Warm brown
+        "accent-secondary": "#8B7355", // Light brown
+        "accent-tertiary": "#A68A64", // Gold brown
+        "accent-highlight": "#D4A574", // Soft gold
         // shadcn/ui colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

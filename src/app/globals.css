@@ -7,30 +7,30 @@
 
 @layer base {
   :root {
-    /* shadcn/ui CSS Variables */
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 214 32% 91%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 214 32% 91%;
-    --accent-foreground: 222 47% 11%;
+    /* shadcn/ui CSS Variables - Light Mode (Ivory & Brown) */
+    --background: 48 67% 97%; /* Ivory */
+    --foreground: 30 25% 15%; /* Deep Brown */
+    --card: 40 40% 98%;
+    --card-foreground: 30 25% 15%;
+    --popover: 40 40% 98%;
+    --popover-foreground: 30 25% 15%;
+    --primary: 30 25% 35%; /* Warm Brown */
+    --primary-foreground: 48 67% 97%;
+    --secondary: 35 20% 90%;
+    --secondary-foreground: 30 25% 15%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 30 15% 45%;
+    --accent: 35 30% 80%;
+    --accent-foreground: 30 25% 15%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --destructive-foreground: 48 67% 97%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 30 25% 35%;
     --radius: 0.5rem;
 
     /* Custom Variables */
-    --accent-color: #3b82f6;
+    --accent-color: #6B5444;
     
     /* Font Variables */
     --font-inter: 'Inter', sans-serif;
@@ -39,26 +39,26 @@
   }
 
   .dark {
-    /* Dark mode colors - Professional dark theme */
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 14%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 14%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 11%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 33% 17%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 60%;
+    /* Dark mode colors - Deep Brown & Cream */
+    --background: 30 25% 12%; /* Deep Brown */
+    --foreground: 40 40% 95%; /* Cream */
+    --card: 30 25% 15%;
+    --card-foreground: 40 40% 95%;
+    --popover: 30 25% 15%;
+    --popover-foreground: 40 40% 95%;
+    --primary: 35 35% 60%; /* Light Brown */
+    --primary-foreground: 30 25% 12%;
+    --secondary: 30 20% 20%;
+    --secondary-foreground: 40 40% 95%;
+    --muted: 30 20% 20%;
+    --muted-foreground: 35 15% 65%;
+    --accent: 30 20% 25%;
+    --accent-foreground: 40 40% 95%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 40 40% 95%;
+    --border: 30 20% 25%;
+    --input: 30 20% 25%;
+    --ring: 35 35% 60%;
   }
 
   * {
@@ -77,39 +77,39 @@
     scroll-behavior: smooth;
   }
 
-  /* Professional scrollbar */
+  /* Elegant scrollbar - Brown theme */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(107, 84, 68, 0.05);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
+    background: linear-gradient(180deg, #6B5444 0%, #8B7355 100%);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #2563eb 0%, #7c3aed 100%);
+    background: linear-gradient(180deg, #4A3728 0%, #6B5444 100%);
   }
 
   /* Firefox scrollbar */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #3b82f6 rgba(0, 0, 0, 0.05);
+    scrollbar-color: #6B5444 rgba(107, 84, 68, 0.05);
   }
 
-  /* Selection color - Professional blue */
+  /* Selection color - Warm brown */
   ::selection {
-    background: rgba(59, 130, 246, 0.2);
+    background: rgba(107, 84, 68, 0.2);
     color: inherit;
   }
 
   ::-moz-selection {
-    background: rgba(59, 130, 246, 0.2);
+    background: rgba(107, 84, 68, 0.2);
     color: inherit;
   }
 }
@@ -130,16 +130,16 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
-  /* Gradient text - Professional */
+  /* Gradient text - Elegant Brown */
   .gradient-text {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #6B5444, #A68A64);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gradient-text-animated {
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6);
+    background: linear-gradient(90deg, #6B5444, #A68A64, #D4A574, #6B5444);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -156,10 +156,10 @@
     }
   }
 
-  /* Professional button hover effect */
+  /* Elegant button hover effect */
   .btn-professional {
     position: relative;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #6B5444, #8B7355);
     border: none;
     color: white;
     transition: all 0.3s ease;
@@ -167,7 +167,7 @@
 
   .btn-professional:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 25px rgba(107, 84, 68, 0.3);
   }
 
   /* Elegant border gradient */
@@ -175,14 +175,14 @@
     position: relative;
     border: 2px solid transparent;
     background: linear-gradient(white, white),
-      linear-gradient(135deg, #3b82f6, #8b5cf6);
+      linear-gradient(135deg, #6B5444, #A68A64);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
   }
 
   .dark .elegant-border {
     background: linear-gradient(var(--background), var(--background)),
-      linear-gradient(135deg, #3b82f6, #8b5cf6);
+      linear-gradient(135deg, #6B5444, #A68A64);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
   }
@@ -190,8 +190,8 @@
   /* Subtle grid background */
   .subtle-grid {
     background-image: 
-      linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(107, 84, 68, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(107, 84, 68, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
     background-position: center center;
   }
@@ -237,12 +237,12 @@
     }
   }
 
-  /* Professional spinner */
+  /* Elegant spinner */
   .professional-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(59, 130, 246, 0.1);
-    border-top-color: #3b82f6;
+    border: 3px solid rgba(107, 84, 68, 0.1);
+    border-top-color: #6B5444;
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }
