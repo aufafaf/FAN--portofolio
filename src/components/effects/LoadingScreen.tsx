@@ -213,16 +213,18 @@ function CornerDecorations() {
   return (
     <>
       {/* Top Left */}
-      <div className="absolute left-8 top-8 h-16 w-16 border-l-2 border-t-2 border-accent-primary" />
+      <div className="absolute left-8 top-8 h-16 w-16 border-l-2 border-t-2 border-neon-cyan" />
 
       {/* Top Right */}
-      <div className="absolute right-8 top-8 h-16 w-16 border-r-2 border-t-2 border-accent-primary" />
+      <div className="absolute right-8 top-8 h-16 w-16 border-r-2 border-t-2 border-neon-cyan" />
+className="absolute right-4 top-4 h-20 w-20 border-r-2 border-t-2 border- md:right-8 md:top-8"
+
 
       {/* Bottom Left */}
-      <div className="absolute bottom-8 left-8 h-16 w-16 border-b-2 border-l-2 border-accent-secondary" />
+      <div className="absolute bottom-8 left-8 h-16 w-16 border-b-2 border-l-2 border-neon-pink" />
 
       {/* Bottom Right */}
-      <div className="absolute bottom-8 right-8 h-16 w-16 border-b-2 border-r-2 border-accent-secondary" />
+      <div className="absolute bottom-8 right-8 h-16 w-16 border-b-2 border-r-2 border-neon-pink" />
     </>
   );
 }
