@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GlitchTextContinuous } from "./GlitchText";
 
 interface LoadingScreenProps {
   onLoadingComplete?: () => void;
@@ -42,30 +41,31 @@ export function LoadingScreen({
     <AnimatePresence>
       {!isComplete && (
         <motion.div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-cyber-darker"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-background"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Cyber grid background */}
-          <div className="cyber-grid-animated absolute inset-0 opacity-20" />
-
-          {/* Scan line effect */}
-          <div className="absolute inset-0 scan-lines opacity-30" />
+          {/* Subtle background pattern */}
+          <div className="subtle-grid absolute inset-0 opacity-20" />
 
           {/* Content */}
           <div className="relative z-10 flex flex-col items-center gap-8">
-            {/* Logo/Text */}
+            {/* Logo/Text with Clean Animation */}
             <div className="text-center">
-              <GlitchTextContinuous
-                text="INITIALIZING"
-                className="text-4xl font-heading font-bold tracking-wider md:text-6xl"
-              />
+              <motion.h1
+                className="font-display text-5xl font-bold tracking-wide md:text-7xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                INITIALIZING
+              </motion.h1>
               <motion.p
-                className="mt-4 font-mono text-sm text-neon-cyan md:text-base"
+                className="mt-4 font-mono text-sm text-muted-foreground md:text-base"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
               >
                 LOADING EXPERIENCE...
               </motion.p>
@@ -75,7 +75,7 @@ export function LoadingScreen({
             <div className="relative h-24 w-24">
               {/* Outer ring */}
               <motion.div
-                className="absolute inset-0 rounded-full border-4 border-neon-cyan/30"
+                className="absolute inset-0 rounded-full border-4 border-accent-primary/30"
                 animate={{ rotate: 360 }}
                 transition={{
                   duration: 2,
@@ -86,7 +86,7 @@ export function LoadingScreen({
 
               {/* Middle ring */}
               <motion.div
-                className="absolute inset-2 rounded-full border-4 border-neon-pink/30"
+                className="absolute inset-2 rounded-full border-4 border-accent-secondary/30"
                 animate={{ rotate: -360 }}
                 transition={{
                   duration: 1.5,
@@ -97,7 +97,7 @@ export function LoadingScreen({
 
               {/* Inner ring */}
               <motion.div
-                className="absolute inset-4 rounded-full border-4 border-neon-purple/30"
+                className="absolute inset-4 rounded-full border-4 border-accent-tertiary/30"
                 animate={{ rotate: 360 }}
                 transition={{
                   duration: 1,
@@ -109,7 +109,7 @@ export function LoadingScreen({
               {/* Center dot */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
-                  className="h-4 w-4 rounded-full bg-neon-cyan shadow-neon-cyan"
+                  className="h-4 w-4 rounded-full bg-accent-primary shadow-elegant"
                   animate={{
                     scale: [1, 1.5, 1],
                     opacity: [1, 0.5, 1],
@@ -125,10 +125,10 @@ export function LoadingScreen({
 
             {/* Progress Bar */}
             <div className="w-80 max-w-[90vw]">
-              <div className="relative h-2 overflow-hidden rounded-full bg-cyber-blue/30">
+              <div className="relative h-2 overflow-hidden rounded-full bg-elegant-sand/30">
                 {/* Animated background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-neon-cyan/20 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/20 to-transparent"
                   animate={{ x: ["-100%", "100%"] }}
                   transition={{
                     duration: 1.5,
@@ -139,7 +139,7 @@ export function LoadingScreen({
 
                 {/* Progress fill */}
                 <motion.div
-                  className="relative h-full bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink"
+                  className="relative h-full bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-tertiary"
                   initial={{ width: "0%" }}
                   animate={{ width: `${progress}%` }}
                   transition={{ duration: 0.3 }}
@@ -147,7 +147,7 @@ export function LoadingScreen({
               </div>
 
               {/* Progress text */}
-              <div className="mt-2 flex items-center justify-between font-mono text-xs text-neon-cyan">
+              <div className="mt-2 flex items-center justify-between font-mono text-xs text-accent-primary">
                 <span>{progress}%</span>
                 <motion.span
                   animate={{ opacity: [1, 0.5, 1] }}
@@ -213,16 +213,16 @@ function CornerDecorations() {
   return (
     <>
       {/* Top Left */}
-      <div className="absolute left-8 top-8 h-16 w-16 border-l-2 border-t-2 border-neon-cyan" />
+      <div className="absolute left-8 top-8 h-16 w-16 border-l-2 border-t-2 border-accent-primary" />
 
       {/* Top Right */}
-      <div className="absolute right-8 top-8 h-16 w-16 border-r-2 border-t-2 border-neon-cyan" />
+      <div className="absolute right-8 top-8 h-16 w-16 border-r-2 border-t-2 border-accent-primary" />
 
       {/* Bottom Left */}
-      <div className="absolute bottom-8 left-8 h-16 w-16 border-b-2 border-l-2 border-neon-pink" />
+      <div className="absolute bottom-8 left-8 h-16 w-16 border-b-2 border-l-2 border-accent-secondary" />
 
       {/* Bottom Right */}
-      <div className="absolute bottom-8 right-8 h-16 w-16 border-b-2 border-r-2 border-neon-pink" />
+      <div className="absolute bottom-8 right-8 h-16 w-16 border-b-2 border-r-2 border-accent-secondary" />
     </>
   );
 }

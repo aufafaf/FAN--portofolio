@@ -154,27 +154,27 @@ export const SEO = {
   },
 };
 
-// Theme Colors (Modern Monochrome)
+// Theme Colors (Spectacular Modern)
 export const THEME_COLORS = {
   mono: {
     white: "#FFFFFF",
     gray50: "#FAFAFA",
-    gray100: "#F5F5F5",
-    gray200: "#E5E5E5",
-    gray300: "#D4D4D4",
-    gray400: "#A3A3A3",
-    gray500: "#737373",
-    gray600: "#525252",
-    gray700: "#404040",
-    gray800: "#262626",
-    gray900: "#171717",
-    black: "#000000",
+    gray100: "#F4F4F5",
+    gray200: "#E4E4E7",
+    gray300: "#D4D4D8",
+    gray400: "#A1A1AA",
+    gray500: "#71717A",
+    gray600: "#52525B",
+    gray700: "#3F3F46",
+    gray800: "#27272A",
+    gray900: "#18181B",
+    black: "#09090B",
   },
   accent: {
-    primary: "#2563eb", // GitHub blue
-    secondary: "#0070f3", // Vercel blue
-    tertiary: "#3b82f6", // Light blue
-    success: "#22c55e", // Green
+    primary: "#3B82F6", // Beautiful Blue
+    secondary: "#8B5CF6", // Purple
+    tertiary: "#06B6D4", // Cyan
+    success: "#10B981", // Green
   },
 };
 

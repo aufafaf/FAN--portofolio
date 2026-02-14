@@ -10,52 +10,52 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Modern Monochrome - Clean Black & White
+        // Spectacular Modern Theme - Clean & Beautiful
         mono: {
           white: "#FFFFFF",
           "gray-50": "#FAFAFA",
-          "gray-100": "#F5F5F5",
-          "gray-200": "#E5E5E5",
-          "gray-300": "#D4D4D4",
-          "gray-400": "#A3A3A3",
-          "gray-500": "#737373",
-          "gray-600": "#525252",
-          "gray-700": "#404040",
-          "gray-800": "#262626",
-          "gray-900": "#171717",
-          black: "#000000",
+          "gray-100": "#F4F4F5",
+          "gray-200": "#E4E4E7",
+          "gray-300": "#D4D4D8",
+          "gray-400": "#A1A1AA",
+          "gray-500": "#71717A",
+          "gray-600": "#52525B",
+          "gray-700": "#3F3F46",
+          "gray-800": "#27272A",
+          "gray-900": "#18181B",
+          black: "#09090B",
         },
-        // Accent colors - Minimal blue accent like GitHub
-        "accent-primary": "#2563eb", // Blue (like GitHub)
-        "accent-secondary": "#0070f3", // Vercel blue
-        "accent-tertiary": "#3b82f6", // Light blue
-        "accent-success": "#22c55e", // Green
-        // Neon colors mapping (backward compatibility)
+        // Beautiful accent - Subtle blue that works
+        "accent-primary": "#3B82F6", // Modern blue
+        "accent-secondary": "#8B5CF6", // Purple
+        "accent-tertiary": "#06B6D4", // Cyan
+        "accent-success": "#10B981", // Green
+        // Neon mapping (backward compatibility)
         neon: {
-          cyan: "#2563eb",
-          pink: "#0070f3",
-          purple: "#3b82f6",
-          green: "#22c55e",
-          yellow: "#eab308",
-          orange: "#f59e0b",
+          cyan: "#06B6D4",
+          pink: "#8B5CF6",
+          purple: "#8B5CF6",
+          green: "#10B981",
+          yellow: "#F59E0B",
+          orange: "#F97316",
         },
-        // Cyber colors mapping
+        // Cyber mapping
         cyber: {
-          dark: "#171717",
-          darker: "#0a0a0a",
-          blue: "#262626",
-          purple: "#404040",
+          dark: "#18181B",
+          darker: "#09090B",
+          blue: "#27272A",
+          purple: "#3F3F46",
         },
-        // Elegant alias (for existing code)
+        // Elegant mapping
         elegant: {
           ivory: "#FFFFFF",
           cream: "#FAFAFA",
-          linen: "#F5F5F5",
-          sand: "#E5E5E5",
-          taupe: "#A3A3A3",
-          brown: "#737373",
-          "deep-brown": "#404040",
-          charcoal: "#171717",
+          linen: "#F4F4F5",
+          sand: "#E4E4E7",
+          taupe: "#A1A1AA",
+          brown: "#71717A",
+          "deep-brown": "#3F3F46",
+          charcoal: "#18181B",
         },
         // shadcn/ui colors
         border: "hsl(var(--border))",
@@ -224,19 +224,26 @@ const config: Config = {
         "cyber-grid": "40px 40px",
       },
       boxShadow: {
-        // Modern shadows - GitHub/Vercel style
-        "elegant": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)",
-        "elegant-lg": "0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.08)",
-        "inner-light": "inset 0 2px 4px rgba(0, 0, 0, 0.06)",
-        // Neon shadow aliases (subtle gray shadows)
-        "neon-pink": "0 0 0 3px rgba(37, 99, 235, 0.1)",
-        "neon-cyan": "0 0 0 3px rgba(37, 99, 235, 0.1)",
-        "neon-purple": "0 0 0 3px rgba(59, 130, 246, 0.1)",
-        "neon-green": "0 0 0 3px rgba(34, 197, 94, 0.1)",
-        "glow-sm": "0 0 10px rgba(0, 0, 0, 0.1)",
-        "glow-md": "0 4px 20px rgba(0, 0, 0, 0.15)",
-        "glow-lg": "0 10px 40px rgba(0, 0, 0, 0.2)",
-        "inner-glow": "inset 0 2px 10px rgba(0, 0, 0, 0.1)",
+        // Beautiful modern shadows
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "DEFAULT": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "elegant": "0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06)",
+        "elegant-lg": "0 10px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04)",
+        "inner": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
+        "inner-light": "inset 0 1px 2px rgba(0, 0, 0, 0.05)",
+        // Neon shadow aliases (beautiful subtle colored shadows)
+        "neon-cyan": "0 0 20px rgba(6, 182, 212, 0.15), 0 4px 12px rgba(6, 182, 212, 0.1)",
+        "neon-pink": "0 0 20px rgba(139, 92, 246, 0.15), 0 4px 12px rgba(139, 92, 246, 0.1)",
+        "neon-purple": "0 0 20px rgba(139, 92, 246, 0.15), 0 4px 12px rgba(139, 92, 246, 0.1)",
+        "neon-green": "0 0 20px rgba(16, 185, 129, 0.15), 0 4px 12px rgba(16, 185, 129, 0.1)",
+        "glow-sm": "0 0 10px rgba(59, 130, 246, 0.1)",
+        "glow-md": "0 0 20px rgba(59, 130, 246, 0.15)",
+        "glow-lg": "0 0 40px rgba(59, 130, 246, 0.2)",
+        "inner-glow": "inset 0 0 20px rgba(59, 130, 246, 0.05)",
       },
       backdropBlur: {
         xs: "2px",
