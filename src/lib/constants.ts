@@ -7,19 +7,19 @@ export const PERSONAL_INFO = {
   name: "Muhammad Falah Aufa Anggara",
   role: "Full Stack Developer | App Developer | Cyber Security Analyst",
   tagline: "Building secure and scalable solutions with modern technology",
-  bio: "Computer Science student at Universitas Gadjah Mada with passion for full-stack development, mobile applications, and cybersecurity. Committed to writing clean, efficient code and building solutions that make a difference.",
+  bio: "Information Technology student at Universitas Gadjah Mada with passion for full-stack development, mobile applications, and cybersecurity. Committed to writing clean, efficient code and building solutions that make a difference.",
   location: "Yogyakarta, Indonesia",
-  email: "falahaufa@example.com",
-  phone: "+62 xxx xxxx xxxx",
+  email: "mfaufalaha@gmail.com",
+  phone: "+62 823 2204 7740",
   availability: "Open for opportunities",
 };
 
 // Social Media Links
 export const SOCIAL_LINKS = {
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  github: "https://github.com/aufafaf",
+  linkedin: "https://linkedin.com/in/Muhammad Falah Aufa Anggara",
   twitter: "https://twitter.com/yourusername",
-  instagram: "https://instagram.com/yourusername",
+  instagram: "https://instagram.com/au.fann",
   dribbble: "https://dribbble.com/yourusername",
   behance: "https://behance.net/yourusername",
 };
@@ -125,9 +125,9 @@ export const CONTACT_FORM = {
 
 // SEO Configuration
 export const SEO = {
-  title: "Your Name - Full Stack Developer",
+  title: "Muhammad Falah Aufa Anggara",
   description:
-    "Portfolio of Your Name - Full Stack Developer specializing in React, Next.js, Three.js, and modern web technologies.",
+    "Portfolio of Muhammad Falah Aufa Anggara - Full Stack Developer specializing in React, Next.js, Three.js, and modern web technologies.",
   keywords: [
     "web developer",
     "full stack developer",
@@ -217,10 +217,10 @@ export const BLOG = {
 
 // Statistics
 export const STATS = {
-  yearsOfExperience: 5,
-  projectsCompleted: 50,
-  happyClients: 30,
-  cupsOfCoffee: 1000,
+  yearsOfExperience: 1,
+  projectsCompleted: 25,
+  happyClients: 25,
+  cupsOfCoffee: 100,
 };
 
 // Command Palette Commands
