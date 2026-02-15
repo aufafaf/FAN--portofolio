@@ -35,7 +35,7 @@
 //           <ambientLight intensity={0.5} />
 //           <pointLight position={[10, 10, 10]} intensity={1} color="#00F0FF" />
 //           <pointLight position={[-10, -10, -10]} intensity={0.5} color="#FF006E" />
-          
+
 //           <Suspense fallback={null}>
 //             <ParticleSystem count={100} size={0.05} color="#00F0FF" />
 //             <FloatingShapes />
@@ -123,7 +123,7 @@
 //               whileTap={{ scale: 0.95 }}
 //             >
 //               <span className="relative z-10">View My Work</span>
-              
+
 //               {/* Animated background */}
 //               <motion.div
 //                 className="absolute inset-0 bg-gradient-to-r from-neon-cyan to-neon-purple opacity-0 transition-opacity group-hover:opacity-20"
@@ -315,8 +315,12 @@ export function HeroSection() {
         >
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 10]} intensity={1} color="#00F0FF" />
-          <pointLight position={[-10, -10, -10]} intensity={0.5} color="#FF006E" />
-          
+          <pointLight
+            position={[-10, -10, -10]}
+            intensity={0.5}
+            color="#FF006E"
+          />
+
           <Suspense fallback={null}>
             <ParticleSystem count={100} size={0.05} color="#00F0FF" />
             <FloatingShapes />
@@ -331,7 +335,7 @@ export function HeroSection() {
       <div className="cyber-grid-animated absolute inset-0 -z-10 opacity-20" />
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-4 pt-24">
         <motion.div
           variants={staggerContainer}
           initial="initial"
@@ -341,7 +345,7 @@ export function HeroSection() {
           {/* Greeting - DI BAWAH NAVBAR, DI ATAS NAMA */}
           <motion.div
             variants={fadeInUp}
-            className="mb-4 font-mono text-sm uppercase tracking-widest text-neon-cyan md:text-base"
+            className="mb-12 font-mono text-sm uppercase tracking-widest text-neon-cyan md:text-base"
           >
             <TypeAnimation
               sequence={[
@@ -359,15 +363,16 @@ export function HeroSection() {
           </motion.div>
 
           {/* Name with glitch effect */}
-          <motion.h1
+          {/* <motion.h1
             variants={fadeInUp}
-            className="mb-6 font-heading text-5xl font-bold leading-tight md:text-7xl lg:text-8xl"
-          >
-            <GlitchTextContinuous
+            className="mb-6 font-display text-2xl font-bold leading-tight md:text-4xl lg:text-xl"
+          > */}
+            {/* <GlitchTextContinuous
               text={PERSONAL_INFO.name}
               className="gradient-text-animated"
-            />
-          </motion.h1>
+            /> */}
+            {/* Muhammad Falah Aufa Anggara
+          </motion.h1> */}
 
           {/* Role */}
           <motion.h2
@@ -380,7 +385,7 @@ export function HeroSection() {
           {/* Tagline */}
           <motion.p
             variants={fadeInUp}
-            className="mx-auto mb-12 max-w-2xl text-base text-muted-foreground md:text-lg"
+            className="mx-auto mb-12 max-w-2xl text-base text-muted-foreground md:text-lg mt-8"
           >
             {PERSONAL_INFO.bio}
           </motion.p>
@@ -397,14 +402,14 @@ export function HeroSection() {
                 "group relative overflow-hidden rounded-lg border-2 border-neon-cyan",
                 "bg-gradient-to-r from-neon-cyan/10 to-neon-purple/10 px-8 py-4",
                 "font-body text-sm font-semibold uppercase tracking-wider text-neon-cyan",
-                "transition-all hover:shadow-neon-cyan"
+                "transition-all hover:shadow-neon-cyan",
               )}
               {...cursorHover}
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10">View My Work</span>
-              
+
               {/* Animated background */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-neon-cyan to-neon-purple opacity-0 transition-opacity group-hover:opacity-20"
@@ -418,7 +423,7 @@ export function HeroSection() {
               className={cn(
                 "rounded-lg border border-border bg-background/50 px-8 py-4",
                 "font-body text-sm font-semibold uppercase tracking-wider",
-                "transition-all hover:border-neon-pink hover:text-neon-pink hover:shadow-glow-sm"
+                "transition-all hover:border-neon-pink hover:text-neon-pink hover:shadow-glow-sm",
               )}
               {...cursorHover}
               whileHover={{ scale: 1.05, y: -3 }}
@@ -434,7 +439,7 @@ export function HeroSection() {
               className={cn(
                 "flex items-center gap-2 rounded-lg border border-border bg-background/50 px-8 py-4",
                 "font-body text-sm font-semibold uppercase tracking-wider",
-                "transition-all hover:border-neon-cyan hover:text-neon-cyan hover:shadow-glow-sm"
+                "transition-all hover:border-neon-cyan hover:text-neon-cyan hover:shadow-glow-sm",
               )}
               {...cursorHover}
               whileHover={{ scale: 1.05, y: -3 }}
@@ -465,7 +470,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -479,7 +484,7 @@ export function HeroSection() {
           <span className="font-mono text-xs text-neon-cyan">SCROLL</span>
           <ArrowDown size={20} className="text-neon-cyan" />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
       {/* 4 KOTAK SIKU DIHAPUS - NO CORNER DECORATIONS! */}
     </section>
@@ -506,7 +511,7 @@ function SocialIcon({ href, icon: Icon, label }: SocialIconProps) {
       className={cn(
         "flex h-12 w-12 items-center justify-center rounded-lg border border-border",
         "bg-background/50 text-muted-foreground transition-all",
-        "hover:border-neon-cyan hover:text-neon-cyan hover:shadow-neon-cyan"
+        "hover:border-neon-cyan hover:text-neon-cyan hover:shadow-neon-cyan",
       )}
       {...cursorHover}
       whileHover={{ scale: 1.1, y: -5 }}

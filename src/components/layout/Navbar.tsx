@@ -25,7 +25,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = NAV_LINKS.map((link) => link.href.replace("#", ""));
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -57,7 +57,7 @@ export function Navbar() {
           "fixed left-0 right-0 top-0 z-50 transition-all duration-300",
           isScrolled
             ? "bg-cyber-dark/80 backdrop-blur-md shadow-lg shadow-neon-cyan/10"
-            : "bg-transparent"
+            : "bg-transparent",
         )}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -90,7 +90,7 @@ export function Navbar() {
                     "relative font-body text-sm font-medium uppercase tracking-wider transition-colors",
                     activeSection === link.href.replace("#", "")
                       ? "text-neon-cyan"
-                      : "text-foreground hover:text-neon-cyan"
+                      : "text-foreground hover:text-neon-cyan",
                   )}
                   onClick={(e) => {
                     e.preventDefault();
@@ -102,7 +102,7 @@ export function Navbar() {
                   transition={{ duration: 0.3, delay: 0.1 * index }}
                 >
                   {link.name}
-                  
+
                   {/* Active indicator */}
                   {activeSection === link.href.replace("#", "") && (
                     <motion.div
@@ -176,15 +176,22 @@ function MobileNav({ isOpen, activeSection, onNavClick }: MobileNavProps) {
           />
 
           {/* Menu */}
-          <motion.div
+          {/* <motion.div
             className="fixed right-0 top-20 z-40 h-[calc(100vh-5rem)] w-full max-w-sm bg-cyber-dark/95 backdrop-blur-md md:hidden"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          > */}
+          <motion.div
+            className="fixed right-0 top-20 z-40 h-[calc(100vh-5rem)] w-full max-w-sm bg-background/95 backdrop-blur-xl border-l border-border md:hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div className="cyber-grid-animated absolute inset-0 opacity-10" />
-            
+
             <div className="relative flex flex-col gap-2 p-6">
               {NAV_LINKS.map((link, index) => (
                 <motion.a
@@ -194,7 +201,8 @@ function MobileNav({ isOpen, activeSection, onNavClick }: MobileNavProps) {
                     "rounded-lg border px-6 py-4 font-body text-lg font-medium uppercase tracking-wider transition-all",
                     activeSection === link.href.replace("#", "")
                       ? "border-neon-cyan bg-neon-cyan/10 text-neon-cyan shadow-neon-cyan"
-                      : "border-border bg-transparent text-foreground hover:border-neon-cyan hover:text-neon-cyan"
+                      // ? "border-accent-primary bg-accent-primary/10 text-accent-primary"
+                      : "border-border bg-transparent text-foreground hover:border-neon-cyan hover:text-neon-cyan",
                   )}
                   onClick={(e) => {
                     e.preventDefault();

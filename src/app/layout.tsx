@@ -135,8 +135,8 @@ export const metadata: Metadata = {
   title: SEO.title,
   description: SEO.description,
   keywords: SEO.keywords,
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+  authors: [{ name: "Muhammad Falah Aufa Anggara" }],
+  creator: "Muhammad Falah Aufa Anggara",
   openGraph: {
     type: "website",
     locale: "en_US",

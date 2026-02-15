@@ -78,8 +78,10 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="relative py-20 md:py-32">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-cyber-darker to-cyber-dark" />
-      <div className="cyber-grid-animated absolute inset-0 opacity-10" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-cyber-darker to-cyber-dark" />
+      <div className="cyber-grid-animated absolute inset-0 opacity-10" /> */}
+            <div className="cyber-grid absolute inset-0 opacity-5" />
+
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
